@@ -1,10 +1,8 @@
 from behave import given, when, then
 from src.is_it_friday import is_it_friday
 
-day = "Sunday"
-
 @given('today is "{day}"')
-def step_given_today_is(context):
+def step_given_today_is(context, day):
     context.today = day
 
 """
