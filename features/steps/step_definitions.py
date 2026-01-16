@@ -1,10 +1,21 @@
 from behave import given, when, then
 from src.is_it_friday import is_it_friday
 
+day = "Sunday"
 
-@given('today is ')
+@given('today is "{day}"')
 def step_given_today_is(context):
-    pass
+    context.today = day
+
+"""
+@given('today is Friday')
+def step_given_today_is(context):
+    context.today = "Friday"
+
+@given('today is Monday')
+def step_given_today_is(context):
+    context.today = "Monday"
+"""
 
 
 @when("I ask whether it's Friday yet")
